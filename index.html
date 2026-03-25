@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Ascender Solutions</title>
+    <title> | </title>
 
     <!-- META TAGS -->
     <meta name="description" content="">
-    <link rel="canonical" href="https://demo.ascender-solutions.com/demos/">
+    <link rel="canonical" href="https://">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Ascender Solutions">
     <meta name="copyright" content="Ascender Solutions">
 
     <!-- OPEN GRAPH -->
-    <meta property="og:url" content="https://demo.ascender-solutions.com/demos/" />
+    <meta property="og:url" content="https://" />
     <meta property="og:site_name" content="" />
     <meta property="og:title" content="">
     <meta property="og:image:type" content="image/webp" />
@@ -27,13 +27,13 @@
     <meta name="twitter:card" content="summary_large_image" />
 
 
-    <!-- FAVICONS -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" />
-    <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
 
 
     <!-- PRECONNECT & PRELOAD -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin> <!-- Font Awesome -->
+    <link rel="preconnect" href="https://unpkg.com" crossorigin> <!-- AOS -->
     <link rel="preload" href="/images/hero.webp" width="1000" height="1000" fetchpriority="high" as="image"
         type="image/webp">
 
@@ -46,6 +46,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
             integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </noscript>
+
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" crossorigin="anonymous" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" crossorigin="anonymous">
     </noscript>
 
     <!-- CRITICAL CSS  -->
@@ -84,37 +91,39 @@
 
 <body>
     <!-- Preloader -->
-    <div id="preloader">
+    <div id="preloader" aria-hidden="true">
         <div id="spinner"></div>
     </div>
 
     <!-- ns-overlay -->
     <div id="ns-overlay"
-        class="fixed z-99 top-0 left-0 bg-black/50 ns-transition opacity-5 invisible w-full h-full contain-layout contain-style ns_active:opacity-100 ns_active:visible">
+        class="fixed z-99 top-0 left-0 bg-black/50 ns-transition opacity-5 invisible w-full h-full contain-layout contain-style ns_active:opacity-100 ns_active:visible"
+        role="presentation">
     </div>
 
 
-    <header role="banner">
+    <header role="banner" aria-label="Site Header">
 
 
 
     </header>
 
 
-    <main role="main">
+    <main role="main" aria-label="Main content">
 
 
 
     </main>
 
 
-    <footer role="contentinfo">
+    <footer role="contentinfo" aria-label="Footer">
 
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/+8801711843742"
+        <a href="https://wa.me/+8801930184038"
             class="animate-ns-wsap-pulse ns-transition hover:bg-black hover:scale-110 hover:shadow-[0_5px_20px_rgb(37,211,102,.7),0_-5px_20px_rgb(37,211,102,.7)] hover:animate-none w-[clamp(3rem,2.509rem+1.869vw,5.5rem)] h-[clamp(3rem,2.509rem+1.869vw,5.5rem)] fixed bottom-[5%] right-[3%] flex-center rounded-circle bg-[#25d366] text-white z-999 aspect-square contain-layout contain-paint contain-style"
-            target="_blank" aria-label="WhatsApp Redirect Button">
-            <span class="icon text-2xl sm:text-4xl flex-center"><i class="fa-brands fa-whatsapp"></i></span>
+            target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Redirect Button">
+            <span class="text-2xl sm:text-4xl flex-center" aria-hidden="true"><i
+                    class="fa-brands fa-whatsapp"></i></span>
         </a>
         <!-- WhatsApp Button -->
 
@@ -126,6 +135,9 @@
     <script>
         (function () { 'use strict'; const loader = document.getElementById("preloader"); if (loader) { if (document.readyState === 'complete') { loader.style.display = "none" } else { window.addEventListener("load", () => { loader.style.transition = 'opacity 0.3s ease'; loader.style.opacity = '0'; setTimeout(() => { loader.style.display = "none" }, 300) }) } } })()
     </script>
+
+    <!-- AOS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
     <!-- Custom js -->
     <script src="/js/custom.js" defer></script>

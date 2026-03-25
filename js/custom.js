@@ -1,4 +1,7 @@
-//         // mouse follower
+// AOS animation init
+AOS.init();
+
+// mouse follower
 // Shery.mouseFollower();
 // Shery.makeMagnet(".magnet")
 // Shery.textAnimate(".text-target", {

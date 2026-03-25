@@ -2,6 +2,11 @@
 
 @theme {
 
+    /* PROJECT COLORS */
+    --color-primary: #;
+    --color-secondary: #;
+    --color-ascent: #;
+
     /* TRANSITIONS */
     --transition: 0.3s ease;
 
@@ -181,20 +186,6 @@
         max-width: 100%;
     }
 
-    /* Lists */
-    ol,
-    ul {
-        padding-left: 2rem;
-        margin: 0 0 1rem;
-    }
-
-    ol ol,
-    ol ul,
-    ul ol,
-    ul ul {
-        margin: 0;
-    }
-
 
     input:not([type="checkbox"], [type="radio"]),
     select,
@@ -206,7 +197,7 @@
 
     /* Accessibility & Focus Management */
     :where(:focus-visible) {
-        outline-offset: 2px;
+        outline-offset: .25rem;
     }
 
     :where(:focus:not(:focus-visible)) {
@@ -285,7 +276,6 @@
         font-size: clamp(1.375rem, .857rem + 2.589vw, 5rem);
         position: relative;
         text-align: center;
-
         &::before {
             position: absolute;
             content: '';
@@ -777,5 +767,47 @@
     @media (min-width: 62rem) {
         flex: 0 0 auto;
         width: 100%;
+    }
+}
+
+@utility ns-text-stroke-white {
+    text-shadow:
+        -1px -1px 0 var(--color-black),
+        2px -2px 0 var(--color-white),
+        -1px 1px 0 var(--color-white),
+        -2px -1px 0 var(--color-white);
+
+    @supports ((-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000)) {
+        text-shadow: none;
+        -webkit-text-stroke: clamp(.016rem, .007rem + .041vw, .075rem) var(--color-white);
+        text-stroke: clamp(.016rem, .007rem + .041vw, .075rem) var(--color-white);
+    }
+}
+
+@utility ns-text-stroke-black {
+    text-shadow:
+        -1px -1px 0 var(--color-white),
+        2px -2px 0 var(--color-black),
+        -1px 1px 0 var(--color-black),
+        -2px -1px 0 var(--color-black);
+
+    @supports ((-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000)) {
+        text-shadow: none;
+        -webkit-text-stroke: clamp(.016rem, .007rem + .041vw, .075rem) var(--color-black);
+        text-stroke: clamp(.016rem, .007rem + .041vw, .075rem) var(--color-black);
+    }
+}
+
+@utility ns-text-stroke-gray {
+    text-shadow:
+        -1px -1px 0 var(--color-white),
+        2px -2px 0 var(--color-neutral-300),
+        -1px 1px 0 var(--color-neutral-300),
+        -2px -1px 0 var(--color-neutral-300);
+
+    @supports ((-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000)) {
+        text-shadow: none;
+        -webkit-text-stroke: clamp(.016rem, .007rem + .041vw, .075rem) var(--color-neutral-300);
+        text-stroke: clamp(.016rem, .007rem + .041vw, .075rem) var(--color-neutral-300);
     }
 }
